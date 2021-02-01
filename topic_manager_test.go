@@ -519,6 +519,5 @@ func TestTM_EnsureTopicExists(t *testing.T) {
 		bm.admin.EXPECT().DescribeTopics(gomock.Any()).Return(nil, retErr)
 		err = tm.EnsureTopicExists(topic, npar, rfactor, config)
 		test.AssertNotNil(t, err)
-
 	})
 }
